@@ -49,6 +49,8 @@ Resources:
         Properties:
             RepositoryName: {{cookiecutter.project_name.lower().replace(' ', '-')}}
             RepositoryDescription: {{cookiecutter.project_name}} service repository
+        DeletionPolicy: Retain
+        UpdateReplacePolicy: Retain
 {%- endif %}
 
     # CodeBuild project and resources (S3 Bucket for build artifacts, Role, Project)
