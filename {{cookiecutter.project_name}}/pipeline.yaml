@@ -185,6 +185,7 @@ Resources:
                         ChangeSetName: {{cookiecutter.project_name.lower().replace(' ', '-')}}-ChangeSet-Beta
                         TemplatePath: BuildArtifactAsZip::packaged.yaml
                         Capabilities: CAPABILITY_IAM
+                        ParameterOverrides: '{"StackName": "{{cookiecutter.project_name.lower().replace(' ', '-')}}-beta"}'
                       InputArtifacts:
                         - Name: BuildArtifactAsZip
                       RunOrder: 1
@@ -217,6 +218,7 @@ Resources:
                         ChangeSetName: {{cookiecutter.project_name.lower().replace(' ', '-')}}-ChangeSet-Gamma
                         TemplatePath: BuildArtifactAsZip::packaged.yaml
                         Capabilities: CAPABILITY_IAM
+                        ParameterOverrides: '{"StackName": "{{cookiecutter.project_name.lower().replace(' ', '-')}}-gamma"}'
                       InputArtifacts:
                         - Name: BuildArtifactAsZip
                       RunOrder: 1
@@ -256,6 +258,7 @@ Resources:
                         ChangeSetName: {{cookiecutter.project_name.lower().replace(' ', '-')}}-ChangeSet-Prod
                         TemplatePath: BuildArtifactAsZip::packaged.yaml
                         Capabilities: CAPABILITY_IAM
+                        ParameterOverrides: '{"StackName": "{{cookiecutter.project_name.lower().replace(' ', '-')}}-prod"}'
                       InputArtifacts:
                         - Name: BuildArtifactAsZip
                       RunOrder: 2
